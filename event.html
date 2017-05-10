@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <p>
+            <script>
+                document.body.addEventListener("keypress", function(event) {
+                    if (event.defaultPrevented) {
+                        return; // Should do nothing if the key event was already consumed.
+                    }
+                    document.querySelector("p").innerHTML = "'" + event.key + "' code :" + event.keyCode;
+                });
+            </script>
+</body>
+
+</html>
