@@ -11,6 +11,9 @@
 <body>
     <script>
         let ficheIdentite = {
+            say: function(str) {
+                console.log(str);
+            },
             name: "sorlin",
             firstname: "valentin",
             age: 20,
@@ -23,8 +26,11 @@
                 land: "France"
             },
             chats: ["mia", "mario", "mew", "simba"],
+            chiens: ["looky", "hero"],
+            enfants: [],
             relationship: false
         };
+        ficheIdentite.say("bonjours");
     </script>
 </body>
 
