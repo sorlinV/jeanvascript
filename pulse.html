@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes red_pulse {
+            0% {
+                background-color: white;
+            }
+            50% {
+                background-color: red;
+            }
+            100% {
+                background-color: white;
+                animation: nothing 1s;
+            }
+        }
+        
+        @keyframes green_pulse {
+            0% {
+                background-color: white;
+            }
+            50% {
+                background-color: green;
+            }
+            100% {
+                background-color: white;
+                animation: nothing 1s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" />
+    <button>Click</button>
+    <script>
+        let textfield = document.querySelector("input");
+        let button = document.querySelector("button");
+        button.addEventListener("click", function() {
+            button.style.animation = "";
+            if (textfield.value == "")  {
+                button.style.animation = "red_pulse 1s";
+            } else {
+                button.style.animation = "green_pulse 1s";
+            }
+        });
+        button.addEventListener("animationend", function() {
+            button.style.animation = "";
+        });
+    </script>
+</body>
+
+</html>

@@ -9,16 +9,17 @@
 </head>
 
 <body>
-    <p>
-        <p>
-            <script>
-                document.body.addEventListener("keypress", function(event) {
-                    if (event.defaultPrevented) {
-                        return; // Should do nothing if the key event was already consumed.
-                    }
-                    document.querySelector("p").innerHTML = "'" + event.key + "' code :" + event.keyCode;
-                });
-            </script>
+    <p id="key"></p>
+    <p id="rand"></p>
+    <script>
+        document.body.addEventListener("keypress", function(event) {
+            if (event.defaultPrevented) {
+                return; // Should do nothing if the key event was already consumed.
+            }
+            document.querySelector("#key").innerHTML = "'" + event.key + "' code :" + event.keyCode;
+            document.querySelector("#rand").innerHTML = Math.round(Math.random() * 4 + 0.5);
+        });
+    </script>
 </body>
 
 </html>
