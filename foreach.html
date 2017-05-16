@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="key">
+    <input type="text" id="value">
+    <input type="button" id="button">
+    <script>
+        let obj = {
+            clef1: 'a',
+            clef2: 'b',
+            clef3: 'c'
+        };
+        document.querySelector('#button').addEventListener("click", function() {
+            let key = document.querySelector('#key').value;
+            let value = document.querySelector('#value').value;
+            if (obj.hasOwnProperty(key)) {
+                if (typeof(obj[key]) === "string") {
+                    obj[key] = [obj[key], value];
+                } else if (typeof(obj[key]) === "array" ||  typeof(obj[key]) === "object") {
+                    obj[key].push(value);
+                }
+            } else {
+                obj[key] = value;
+            }
+            for (let key in obj) {
+                console.log(key + ": " + obj[key]);
+            }
+        });
+    </script>
+</body>
+
+</html>
