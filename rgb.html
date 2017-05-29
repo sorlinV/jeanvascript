@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RGB</title>
+    <style>
+        * {
+            text-shadow: white 1px 1px, white -1px 1px, white -1px -1px, white 1px -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <button>red</button>
+    <button>green</button>
+    <button>blue</button>
+    <button>yellow</button>
+    <button>purple</button>
+    <button>pink</button>
+    <button>grey</button>
+    <button>black</button>
+    <button>magenta</button>
+    <button>cyan</button>
+    <script>
+        buttons = document.querySelectorAll("button");
+        console.log(buttons);
+
+        function change_color() {
+            for (let butt of buttons) {
+                butt.style.background = this.textContent;
+            }
+        }
+
+        for (let but of buttons) {
+            but.addEventListener("click", change_color);
+        }
+    </script>
+</body>
+
+</html>

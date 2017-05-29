@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>allez voir la console</h2>
+    <script>
+        let tables = [{
+            num: 1,
+            nb_places: 6,
+            app: [{
+                name: "justin",
+                age: 21
+            }, {
+                name: "maelle",
+                age: 28
+            }, {
+                name: "cyrille",
+                age: 34
+            }]
+        }, {
+            num: 2,
+            nb_places: 6,
+            app: [{
+                name: "virginie",
+                age: 30
+            }, {
+                name: "manu",
+                age: 20
+            }, {
+                name: "apdil",
+                age: 25
+            }]
+        }];
+
+        for (let i = 0; i < tables.length; i++) {
+            console.log(`la table numero ${tables[i].num} a ${tables[i].nb_places} places sur cette table il y a :`);
+            for (let j = 0; j < tables[i].app.length; j++) {
+                console.log(` - ${tables[i].app[j].name} qui a ${tables[i].app[j].age} ans`);
+            }
+        }
+    </script>
+</body>
+
+</html>
